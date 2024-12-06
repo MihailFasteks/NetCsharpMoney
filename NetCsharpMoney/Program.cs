@@ -22,20 +22,27 @@ while (true)
     {
         case 1:
             Console.WriteLine($"money1: {money1.Sum}, money2: {money2.Sum}");
+
             Money resultAdd = money1 + money2;
+
             Console.WriteLine($"Результат сложения: {resultAdd.Sum}");
+            resultAdd.SaveFile($"Результат сложения: {resultAdd.Sum}");
+            
+          
             break;
 
         case 2:
             Console.WriteLine($"Исходная сумма money1: {money1.Sum}");
             money1++;
             Console.WriteLine($"После увеличения: {money1.Sum}");
+            money1.SaveFile($"После увеличения: {money1.Sum}");
             break;
 
         case 3:
             Console.WriteLine($"money1: {money1.Sum}, money2: {money2.Sum}");
             Money resultSub = money1 - money2;
             Console.WriteLine($"Результат вычитания: {resultSub.Sum}");
+            resultSub.SaveFile($"Результат вычитания: {resultSub.Sum}");
             break;
 
         case 4:
@@ -43,6 +50,7 @@ while (true)
             int subtractValue = int.Parse(Console.ReadLine());
             Money resultSubInt = money1 - subtractValue;
             Console.WriteLine($"Результат вычитания числа: {resultSubInt.Sum}");
+            resultSubInt.SaveFile($"Результат вычитания числа: {resultSubInt.Sum}");
             break;
 
         case 5:
@@ -50,6 +58,7 @@ while (true)
             int addValue = int.Parse(Console.ReadLine());
             Money resultAddInt = money1 + addValue;
             Console.WriteLine($"Результат сложения числа: {resultAddInt.Sum}");
+            resultAddInt.SaveFile($"Результат сложения числа: {resultAddInt.Sum}");
             break;
 
         case 6:
